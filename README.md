@@ -19,6 +19,7 @@ The client experience should display all of the information, but structed in a s
 Use Bootstap to make your row creation easier! The information should be in a Bootstrap 'well' container, and have a col-md-3 width. We will be introducing this concept tomorrow, but get a sneak peek!
 
 https://getbootstrap.com/getting-started/
+
 https://getbootstrap.com/examples/grid/
 
 Good Luck!
