@@ -1,5 +1,5 @@
 // Requirements
-var shuffle = require('shuffle');
+var shuffle = require('./shuffle');
 ​
 // Init variables
 var newTwitterHandle = '';
