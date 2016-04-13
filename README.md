@@ -15,7 +15,7 @@ All other details of this project can be determined by your team.
 
 ##Hard Mode
 
-The client experience should display all of the information, but structed in a specific way. There should be 4 users per 'row'. The client experience should also have a delete button that deletes the user both in the DOM and in the Database. 
+The client experience should display all of the information, but structed in a specific way. There should be 4 users per 'row'. It should also have a delete button that deletes the user both in the DOM and in the Database. 
 Use Bootstap to make your row creation easier! The information should be in a Bootstrap 'well' container, and have a col-md-3 width. We will be introducing this concept tomorrow, but get a sneak peek!
 
 https://getbootstrap.com/examples/grid/
