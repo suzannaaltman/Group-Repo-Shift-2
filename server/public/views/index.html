@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="blueApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Blue Team Is The Best</title>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+
+  </head>
+  <body ng-controller="BlueController">
+      <h1>Blue Team</h1>
+      <div ng-repeat="user in userList">
+        {{user}}
+      </div>
+  </body>
+</html>
