@@ -7,4 +7,4 @@ var playGod = function() {
 }
 
 
-module.exports = playGod();
+module.exports = playGod;
