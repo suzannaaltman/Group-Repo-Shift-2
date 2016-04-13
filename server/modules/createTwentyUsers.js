@@ -1,8 +1,11 @@
 var user = require('./createSingleUser.js');
 var userList = [];
 
-for(var i = 0; i < 20; i++){
+var makeList = function(){
+  for(var i = 0; i < 20; i++){
   userList.push(user());
 }
+}
 
-module.exports = userList;
+
+module.exports = makeList;

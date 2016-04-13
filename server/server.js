@@ -3,10 +3,15 @@ var index = require('./routes/index.js');
 var mongoose = require('mongoose');
 var app = express();
 
-app.use('/', index);
-app.use(express.static('server/public'));
 
 mongoose.connect('mongodb://localhost/blueTeam');
+
+app.use(express.static('server/public'));
+
+app.use('/', index);
+
+
+
 
 
 //  Server Listener
