@@ -3,7 +3,7 @@ var path = require('path');
 var users = require('../modules/createTwentyUsers.js');
 var userModel = require('../../models/userModel.js');
 var router = express.Router();
-
+// maybe add makeList here?
 var app = express();
 
 router.get('/', function(request, response){
@@ -12,6 +12,7 @@ router.get('/', function(request, response){
 
 
 router.get('/people', function(request, response){
+  var data = request.body;
   userModel.find({}, function(err, people){
     if(err){
       console.log(err);

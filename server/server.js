@@ -4,13 +4,18 @@ var mongoose = require('mongoose');
 var users = require('./modules/createTwentyUsers.js');
 var userModel = require('../models/userModel.js');
 var app = express();
-
-
-mongoose.connect('mongodb://localhost/blueTeam');
+var bodyParser = require('body-parser');
 
 app.use(express.static('server/public'));
-
+app.use(bodyParser.json());
 app.use('/', index);
+
+var mongoURI = "mongodb://localhost:27017/blueTeam"
+var mongodb = mongoose.connect(mongoURI).connection;
+
+
+
+
 
 
 
