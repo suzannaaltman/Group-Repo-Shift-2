@@ -4,8 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>Red Team</title>
-    <script src = "./vendor/angular/angular.min.js"></script>
-    <script src= "./assets/scripts/client.min.js"></script>
+    <script src = "vendor/angular/angular.min.js"></script>
+    <script src= "assets/scripts/client.min.js"></script>
+    <link rel="stylesheet" href="views/styles.css" />
   </head>
 
   <body ng-controller = "PeopleController">
@@ -13,11 +14,13 @@
       <button ng-click = "getPeople()">Get People</button>
       <!-- Functionality for accessing list -->
       <div ng-repeat = "user in users">
-        <p>Name: {{user.name}}</p>
-        <p>Age: {{user.age}}</p>
-        <p>Location: {{user.location}}</p>
-        <p>Birthplace: {{user.birthplace}}</p>
-        <p>Twitter: {{user.twitter}}</p>
+        <div class="user_data">
+          <p>Name: {{user.name}}</p>
+          <p>Age: {{user.age}}</p>
+          <p>Location: {{user.location}}</p>
+          <p>Birthplace: {{user.birthplace}}</p>
+          <p>Twitter: {{user.twitter}}</p>
+        </div>
         <button ng-click="removeUser(user)">Remove</button>
       </div>
     </div>
