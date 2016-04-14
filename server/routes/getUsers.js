@@ -1,10 +1,15 @@
 //this is our route that creates users 20 times.
 
 var createUser=require('./createUser');
-var twentyUsers = [];
 
-for (var it = 0; it < 20; it++) {
-  twentyUsers.push(createUser());
+function getUser() {
+  var arr = [];
+for (var i = 0; i < 20; i++) {
+  arr.push(createUser());
+}
+console.log(arr);
+return arr;
+
 }
 
-module.exports = twentyUsers;
+module.exports = getUser;

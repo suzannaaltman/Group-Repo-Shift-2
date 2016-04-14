@@ -12,7 +12,7 @@ app.use('/', index);
 app.use(express.static('server/public'));
 
       //[[[[[[[[[[[[[[[Put database name after localhost:27017/]]]]]]]]]]]]]]]
-var mongoURI = 'mongodb://localhost:27017/';
+var mongoURI = 'mongodb://localhost/yellowTeam/';
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function(err){

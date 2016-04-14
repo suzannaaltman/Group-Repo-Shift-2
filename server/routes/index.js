@@ -10,13 +10,22 @@ router.get('/', function(request, response){
   response.sendFile(path.join(__dirname, '../public/views/index.html'));
 });
 
+router.get('/all', function(request, response) {
+  Person.find({}, function(err, person) {
+    if(err){
+      console.log('error retreiving from DB');
+      response.sendStatus(500);
+    }
+    response.send(person);
+  });
+});
+
 router.get("/users", function(request, response) {
-  response.send(twentyUsers);
+  twentyUsers();
 });
 
 router.delete("/deleteUsers/:id", function(request, response) {
   console.log("delete id", request.params.id);
-  console.log("request", request);
   Person.findOneAndRemove({_id: request.params.id}, function(err, person){
     if (err){
       console.log(err);

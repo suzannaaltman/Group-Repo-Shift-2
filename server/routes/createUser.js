@@ -22,9 +22,10 @@ var makeNewPerson = function() {
     if(err){
       console.log('Error on save! Danger!');
     } else {
-      console.log("saved successfully");
+      console.log("saved");
     }
   });
+  console.log(newPerson);
   return newPerson;
 };
 
