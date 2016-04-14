@@ -6,6 +6,7 @@ var app = express();
 
 mongoose.connect("mongodb://localhost/redTeam");
 
+app.use(express.static('server/public'));
 app.use("/", index);
 
 
