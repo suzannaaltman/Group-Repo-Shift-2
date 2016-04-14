@@ -18,13 +18,13 @@ var makeNewUser = function() {
   });
 
   aPerson.save(function(err) {
+    console.log('kjhgfdsfgfkjhhgfgdgfgjh');
     if (err) {
       console.log(err);
     } else {
       console.log("aPerson saved successfully");
     }
   });
-  return aPerson;
 };
 
 module.exports = makeNewUser;

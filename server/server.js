@@ -7,20 +7,20 @@ var indexRoutes = require('./routes/indexRoutes');
 var app = express();
 
 // DATABASE
-// var mongoUri = 'mongodb://localhost/userStore';
-// var MongoDB = mongoose.connect(mongoUri).connection;
-//
-// MongoDB.on('error', function(err) {
-//   console.log('MongoDb connection error', err);
-// });
-//
-// MongoDB.once('open', function() {
-//   console.log('MongoDb connection open.');
-// });
+var mongoUri = 'mongodb://localhost/userStore';
+var MongoDB = mongoose.connect(mongoUri).connection;
+
+MongoDB.on('error', function(err) {
+  console.log('MongoDb connection error', err);
+});
+
+MongoDB.once('open', function() {
+  console.log('MongoDb connection open.');
+});
 
 // ROUTERS
-app.use('/', indexRoutes);
 app.use(express.static('server/public'));
+app.use('/', indexRoutes);
 
 // SERVER
 var server = app.listen(3000, function(){

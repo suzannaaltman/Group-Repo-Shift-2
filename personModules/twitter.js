@@ -1,6 +1,4 @@
-// Requirements
-var shuffle = require('./shuffle');
-
+// Requiremen
 // Init variables
 var adjectiveList = ['Pistachio', 'Sparkly', 'Banana', 'Nerdy', 'Rainbow',
 'HungryHungry', 'Invisible', 'Magnificent', 'Fancy', 'Lunar', 'Cantankerous',
@@ -17,8 +15,8 @@ var nounList = ['Sandwich', 'Nerd', 'Monkey', 'Cowboy', 'Ninja', 'Pants',
 'Bro', 'Barricuda', 'Diet', 'Gamer', 'Pirate', 'Chihuaua'];
 
 var newTwitterHandle = function(){
-  var adjective = shuffle(adjectiveList).pop();
-  var noun = shuffle(nounList).pop();
+  var adjective = adjectiveList[Math.floor(Math.random() * adjectiveList.length)];
+  var noun = nounList[Math.floor(Math.random() * nounList.length)];
 
   // Generate random twitterhandle
   return '@' + adjective + noun;

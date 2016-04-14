@@ -1,6 +1,4 @@
 // var location = require('./location');
-var shuffle = require('./shuffle');
-
 // //brings in array from location file
 // var array = location.locationArray;
 // //shuffles location array
@@ -14,7 +12,8 @@ var array = ['Madrid, Spain', 'Jackson, Mississippi', 'Reykjavik, Iceland', 'Min
 //shuffles array
 
 var shuffleBirthPlace = function() {
-  return shuffleArray(array).pop();
+  return array[Math.floor(Math.random() * array.length)];
 };
 
+console.log(shuffleBirthPlace());
 module.exports = shuffleBirthPlace;
