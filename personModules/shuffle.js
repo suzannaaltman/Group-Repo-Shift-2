@@ -10,3 +10,5 @@ var shuffle = function(array) {
   }
   return tempArr;
 }
+
+module.exports = shuffle;

@@ -2,8 +2,8 @@
 
 var personAge = function(min, max){
   return Math.floor(Math.random() * (1 + max - min) + min);
-}
+};
 
-personAge(1, 124);
+personAge(1, 124);  //  Doesn't do anything when called here
 
 module.exports = personAge;
