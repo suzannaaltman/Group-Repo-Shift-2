@@ -13,8 +13,13 @@ router.get('/', function(request, response){
 });
 
 router.get('/create', function(request, response) {
-  create20();
-  response.sendStatus(200);
+  console.log('hello from index.js router');
+  // response.sendStatus(200);
+  response.send(create20());
+});
+
+router.post('/create', function(request, response){
+  //need to send users that are created
 });
 
 router.get('/people', function(request, response) {

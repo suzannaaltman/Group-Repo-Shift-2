@@ -7,8 +7,7 @@
   <script src="./vendor/angular/angular.min.js"></script>
   <script src="./assets/scripts/client.min.js"></script>
   <body ng-controller="MainController">
-    <button>Create User</button>
-    <button>Create 20</button>
+    <button ng-click="getUsers()">Create 20</button>
     <div>
       <ul>
        <li ng-repeat="people in peoples">
