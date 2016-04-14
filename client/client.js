@@ -1,9 +1,13 @@
 var app = angular.module('blueApp', []);
 
 app.controller('BlueController', ['$scope', '$http', function($scope, $http){
-    $http.get('/newuser').then(function(response){
-        $scope.userList = [];
-        $scope.userList = response.data;
+  $scope.userList = [];
+
+  $scope.getPeople = function() {
+    $http.get('/people').then(function(response){
+      $scope.userList = response.data;
+
       console.log(response);
-    });
+    })
+  }
 }])

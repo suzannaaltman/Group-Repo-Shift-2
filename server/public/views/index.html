@@ -5,12 +5,30 @@
     <title>Blue Team Is The Best</title>
     <script src="vendor/angular/angular.min.js"></script>
     <script src="assets/scripts/client.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   </head>
   <body ng-controller="BlueController">
-      <h1>Blue Team</h1>
-      <div ng-repeat="user in userList">
-        {{user}}
-      </div>
+    <!-- Bootstrap? -->
+    <main class="container">
+      <button class="btn btn-success" ng-click="getPeople()">Get people</button>
+        <h1><span style="color: green;">Blue</span> <span style="color: orange;">Team</span></h1>
+        <div class="container">
+          <div class="row" ng-repeat="user in userList">
+            <div class="col-md-4">
+              <p>Name: {{user.name}}</p>
+              <p>Age: {{user.age}}</p>
+              <p>Birthplace: {{user.birthplace}}</p>
+              <p>Location: {{user.location}}</p>
+              <p>Twitter: {{user.twitter}}</p>
+            </div>
+          </div>
+        </div>
+    </main>
   </body>
 </html>
