@@ -18,6 +18,7 @@ router.get('/create', function(request, response) {
 });
 
 router.get('/people', function(request, response) {
+  var data = request.body;
   User.find({}, function(err, people) {
     if(err) {
       console.log(err);

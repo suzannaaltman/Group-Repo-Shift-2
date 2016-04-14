@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Random Twitter</title>
   </head>
-  <body>
-
+  <script src="./vendor/angular/angular.min.js"></script>
+  <script src="./assets/scripts/client.min.js"></script>
+  <body ng-controller="MainController">
+    <button>Create User</button>
+    <button>Create 20</button>
+    <div>
+      <ul>
+       <li ng-repeat="people in peoples">
+         {{people}}
+       </li>
+     </ul>
+   </div>
   </body>
 </html>

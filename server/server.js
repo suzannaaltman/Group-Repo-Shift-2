@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var index = require('./routes/index');
+var bodyParser = require('body-parser');
 
 var MongoDB = mongoose.connect('mongodb://localhost/repo-shift-2').connection;
 
@@ -14,8 +15,8 @@ MongoDB.once('open', function() {
 
 var app = express();
 
+app.use(bodyParser.json());
 app.use(express.static('server/public'));
-
 app.use('/', index);
 
 var server = app.listen(process.env.PORT || 3000, function() {

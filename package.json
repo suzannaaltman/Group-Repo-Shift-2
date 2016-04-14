@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js"
+    "start": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/PrimeAcademy/Group-Repo-Shift-2#readme",
   "dependencies": {
     "angular": "^1.5.3",
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "grunt": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
