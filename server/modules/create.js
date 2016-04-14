@@ -16,8 +16,9 @@ var createPerson = function() {
     birth: birth[Math.floor(Math.random() * birth.length)],
     location: location[Math.floor(Math.random() * location.length)],
     twitter: twitter[Math.floor(Math.random() * twitter.length)]
-  });
 
+  });
+//It is exporting but not being returned yet
   person.save(function(err) {
     if(err) {
       console.log(err);
@@ -25,6 +26,7 @@ var createPerson = function() {
       console.log('Person saved!');
     }
   });
+  //to do: make return statement!!!!!!!!  :)  LOL!
 }
 
 module.exports = createPerson;
