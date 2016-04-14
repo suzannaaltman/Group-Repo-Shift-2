@@ -6,9 +6,11 @@ var age=require('./age');
 var birthplace=require('./birthplace');
 var location=require('./location');
 var twitter=require('./twitter');
+var app = express();
 
 app.get('/', function(request, response){
 ///put all the objects in here.
+
 })
 
 
