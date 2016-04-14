@@ -1,4 +1,5 @@
 //call on name, age, birthplace, location, twitter handle, and creates individual user. Then sends to the database.
+var Person = require('../../Person');
 var express=require('express');
 var router=express.Router();
 var name=require('./name');
@@ -9,14 +10,20 @@ var twitter=require('./twitter');
 var app = express();
 
 app.get('/', function(request, response){
-///put all the objects in here.
+  var newPerson = new Person({
+    personAge: age,
+    personName: name,
+    personLocation: location,
+    personBirthplace: birthplace,
+    personTwitter: twitter
+  });
+
+  newPerson.save(function(err){
+    if(err){
+      console.log('Error on save! Danger!');
+    }
+    });
+  response.send(newPerson);
+  console.log(newPerson);
 
 })
-
-
-
-
-
-
-
-module.exports=router;
