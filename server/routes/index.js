@@ -2,7 +2,7 @@ var express = require("express");
 var users = require("../modules/createTwentyUsers");
 var User = require('../../models/usermodel');
 var path = require('path');
-var User = require("../../models/usermodel");
+
 
 var router = express.Router();
 
@@ -16,10 +16,12 @@ router.get("/", function(request, response) {
 router.get("/all", function(resquest, response) {
   console.log('This is working');
   User.find({}, function(err, people){
+    console.log('router find users in db');
     if(err){
       console.log(err);
       response.sendStatus(500);
     } else {
+      console.log('index.js router', people);
       response.send(people);
     }
   })

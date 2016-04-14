@@ -7,6 +7,7 @@ app.controller('PeopleController', ['$scope', '$http', function($scope, $http){
 
   $scope.getPeople = function(){
     $http.get('/all').then(function(response){
+      console.log(response);
       $scope.users = response.data;
       console.log($scope.users);
     })
@@ -21,9 +22,5 @@ app.controller('PeopleController', ['$scope', '$http', function($scope, $http){
         //TODO: set up endpoint
     })
   }
-
-
-
-
 
 }]);
