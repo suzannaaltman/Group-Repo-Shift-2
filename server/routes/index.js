@@ -18,10 +18,6 @@ router.get('/create', function(request, response) {
   response.send(create20());
 });
 
-router.post('/create', function(request, response){
-  //need to send users that are created
-});
-
 router.get('/people', function(request, response) {
   var data = request.body;
   User.find({}, function(err, people) {

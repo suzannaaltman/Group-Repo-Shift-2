@@ -4,16 +4,24 @@
     <meta charset="utf-8">
     <title>Random Twitter</title>
   </head>
-  <script src="./vendor/angular/angular.min.js"></script>
-  <script src="./assets/scripts/client.min.js"></script>
+  <script src="/vendor/angular/angular.min.js"></script>
+  <script src="/assets/scripts/client.min.js"></script>
+  <script src="/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css" />
   <body ng-controller="MainController">
-    <button ng-click="getUsers()">Create 20</button>
-    <div>
-      <ul>
-       <li ng-repeat="people in peoples">
-         {{people}}
-       </li>
-     </ul>
+    <button ng-click="getUsers()">Get people</button>
+    <div class="container">
+       <div class="well col-md-3" ng-repeat="people in peoples">
+         <div>
+           <p>Name: {{people.name}}</p>
+           <p>Age: {{people.age}}</p>
+           <p>Birthplace: {{people.birth}}</p>
+           <p>Location: {{people.location}}</p>
+           <p>Twitter: @{{people.twitter}}</p>
+         </div>
+       </div>
    </div>
   </body>
 </html>
