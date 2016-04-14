@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 //  We think it has something to do with person.js
 //  We're trying to trace it with console logs back through the path
 var indexRoutes = require('./routes/indexRoutes');
+var bodyParser = require('body-parser');
 var app = express();
 
 // DATABASE
@@ -19,6 +20,7 @@ MongoDB.once('open', function() {
 });
 
 // ROUTERS
+app.use(bodyParser.json());
 app.use(express.static('server/public'));
 app.use('/', indexRoutes);
 
