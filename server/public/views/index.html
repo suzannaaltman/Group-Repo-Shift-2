@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="yellowApp">
   <head>
     <meta charset="utf-8">
     <title>Group Repo Shift 2</title>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
   </head>
-  <body>
-
+  <body ng-controller="YellowController">
+    <button ng-click="getUsers()">Get Users</button>
+    <div ng-repeat="user in usersList">
+      Name: {{ user.personName }}
+      Age: {{ user.personAge }}
+      Birthplace: {{ user.personBirthplace }}
+      Location: {{ user.personLocation }}
+      Twitter: {{ user.personTwitter }}
+      <button ng-click="deleteUser(user)">Delete User</button>
+    </div>
   </body>
 </html>

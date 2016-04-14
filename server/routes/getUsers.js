@@ -1,17 +1,10 @@
-//this is our route that creates users 20 times. 
+//this is our route that creates users 20 times.
 
-var express=require('express');
-var router=express.Router();
 var createUser=require('./createUser');
+var twentyUsers = [];
 
+for (var it = 0; it < 20; it++) {
+  twentyUsers.push(createUser());
+}
 
-router.get('/', function(request, response){
-//call create user 20 times and make/send object.
-})
-
-
-
-
-
-
-module.exports=router;
+module.exports = twentyUsers;
