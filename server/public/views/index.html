@@ -9,9 +9,13 @@
   </head>
   <body ng-controller="GreenController">
     <h1>Names Here</h1>
-    <button ng-click ="makeInfo()">Click</button>
+    <button ng-click ="getInfo()">Create</button>
     <div ng-repeat="user in usersList">
-      {{ user }}
+      Name:{{ user.personName }},
+      Age:{{user.personAge}},
+      Location:{{user.personLocation}},
+      personBirthplace: {{user.personBirthplace}},
+      Twitter:{{user.personTwitter}}
     </div>
   </body>
 </html>

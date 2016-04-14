@@ -3,14 +3,6 @@ var app = angular.module("greenApp", []);
 app.controller("GreenController", ["$scope", "$http", function($scope, $http) {
   $scope.usersList = [];
 
-  $scope.makeInfo = function(){
-    //fill the array
-    $http.get('/create').then(function(response){
-    
-    })
-    getInfo();
-  });
-};
 
 
   $scope.getInfo = function(){
@@ -21,5 +13,6 @@ app.controller("GreenController", ["$scope", "$http", function($scope, $http) {
     $scope.usersList = response.data;
   });
 };
+
 
 }]);
