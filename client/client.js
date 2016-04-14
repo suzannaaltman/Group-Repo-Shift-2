@@ -15,11 +15,9 @@ app.controller('MainController', ['$scope','$http', function($scope, $http){
     });
   };
 
+  console.log('blah');
 
-
-
-
-
-
+  //TODO: Start work here, needed to call to minify
+  getAssign();
 
 }]);
