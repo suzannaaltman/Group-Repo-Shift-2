@@ -2,6 +2,7 @@ var express = require("express");
 var users = require("../modules/createTwentyUsers");
 var User = require('../../models/usermodel');
 var path = require('path');
+var User = require("../../models/usermodel");
 
 var router = express.Router();
 
@@ -25,8 +26,18 @@ router.get("/all", function(resquest, response) {
 })
 
 router.get("/create", function(request, response){
-  users();
+  response.send(users());
   response.sendStatus(200);
+})
+
+
+router.delete('/remove/:id', function(request, response){
+  console.log('deleted object');
+  User.findOneAndRemove({_id: request.params.id}, function(err) {
+    if(err) {console.log('delete err', err);}
+  });
+  response.sendStatus(200);
+
 })
 
 module.exports = router;
