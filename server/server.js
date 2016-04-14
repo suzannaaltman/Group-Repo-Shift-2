@@ -1,6 +1,8 @@
 var express = require("express");
 var index = require('./routes/index.js');
 var mongoose = require('mongoose');
+var users = require('./modules/createTwentyUsers.js');
+var userModel = require('../models/userModel.js');
 var app = express();
 
 
