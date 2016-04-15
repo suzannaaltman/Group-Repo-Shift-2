@@ -1,28 +1,29 @@
 var app = angular.module('peopleApp', []);
 
-app.controller('PeopleController', ['$scope', '$http', function($scope, $http){
+app.controller('PeopleController', ['$http', function($http){
   // client side code
-  $scope.users = [];
+  var controller = this;
+  controller.users = [];
 
-  $scope.getPeople = function(){
+  controller.getPeople = function(){
     $http.get('/users').then(function(response){
-    console.log($scope.users);
-    $scope.updateUsers();
+    console.log(controller.users);
+    controller.updateUsers();
     })
   }
 
-  $scope.updateUsers = function(){
+  controller.updateUsers = function(){
     $http.get('/all').then(function(response){
-    $scope.users = response.data;
+    controller.users = response.data;
     })
   }
 
 
-  $scope.removeUser = function(user) {
+  controller.removeUser = function(user) {
     userId = user._id;
     $http.delete('/remove/' +userId).then(function(response){
-        console.log('deleted', user);
-        $scope.getPeople();
+      console.log('deleted', user);
+      controller.getPeople();
     })
   }
 }]);
