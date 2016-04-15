@@ -1,7 +1,7 @@
 var express = require("express");
 var mongoose = require("mongoose");
 var index = require("./routes/index");
-var mongoUri = "mongodb://localhost/redTeam";
+var mongoUri = "mongodb://localhost/redTeamUsers";
 var MongoDB = mongoose.connect(mongoUri).connection;
 
 var app = express();

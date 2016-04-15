@@ -5,12 +5,19 @@ app.controller('PeopleController', ['$scope', '$http', function($scope, $http){
   $scope.users = [];
 
   $scope.getPeople = function(){
-    $http.get('/all').then(function(response){
-      $scope.users = response.data;
-      console.log($scope.users);
+    $http.get('/users').then(function(response){
+    console.log($scope.users);
+    $scope.updateUsers();
     })
-
   }
+
+  $scope.updateUsers = function(){
+    $http.get('/all').then(function(response){
+    $scope.users = response.data;
+    })
+  }
+
+
   $scope.removeUser = function(user) {
     userId = user._id;
     $http.delete('/remove/' +userId).then(function(response){
