@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // DATABASE
-var mongoUri = 'mongodb://localhost/userStore';
+var mongoUri = 'mongodb://localhost/repo-shift-2';
 var MongoDB = mongoose.connect(mongoUri).connection;
 
 MongoDB.on('error', function(err) {

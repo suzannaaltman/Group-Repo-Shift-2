@@ -10,22 +10,22 @@ router.get('/', function(request, response){
   response.sendFile(path.join(__dirname, '../public/views/index.html'));
 });
 
-router.get('/all', function(request, response){
-  console.log("yep");
-  model.find({}, function(err, users){
-    if(err){
-      console.log(err);
-      response.sendStatus(500);
-    } else {
-      response.send(users);
-    }
-  })
-})
+// router.get('/all', function(request, response){
+//   console.log("yep");
+//   model.find({}, function(err, users){
+//     if(err){
+//       console.log(err);
+//       response.sendStatus(500);
+//     } else {
+//       response.send(users);
+//     }
+//   })
+// })
 
 router.get("/create", function(request, response) {
   console.log("get users");
-  twentyUsers();
-  response.sendStatus(200);
+  response.send(twentyUsers());
+
 });
 
 module.exports = router;

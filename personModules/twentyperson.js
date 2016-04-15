@@ -1,11 +1,12 @@
 var person = require("./person");
-var persons = [];
-
 
 var makePeople = function(){
-  for (var it = 0; it < 19; it++) {
-    person();
+  var persons = [];
+  for (var it = 0; it < 20; it++) {
+    persons.push(person());
   }
+  console.log(persons);
+  return persons;
 }
 
 module.exports = makePeople;
